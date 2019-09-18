@@ -1,0 +1,13 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/cadets_canada.css: {}
+  js:
+    js/responsive_menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

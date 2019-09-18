@@ -1,0 +1,17 @@
+name: Cadets Canada
+type: theme
+description: Theme for Cadets Canada.
+base theme: bartik
+core: 8.x
+
+libraries:
+  - core/normalize
+  - cadets_canada_theme/global-styling
+
+regions:
+  header: Header
+  alerts: Alerts
+  highlighted: Highlighted
+  content: Content  # the content region is required
+  sidebar: 'Sidebar'
+  footer: Footer

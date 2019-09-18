@@ -1,0 +1,16 @@
+# Breakpoints - change based on site need
+cadets_canada_theme.xsmall:
+  label: Extra Small
+  mediaQuery: 'all and (min-width: 20em)'
+cadets_canada_theme.small:
+  label: Small
+  mediaQuery: 'all and (min-width: 30em)'
+cadets_canada_theme.medium:
+  label: Medium
+  mediaQuery: 'all and (min-width: 48em)'
+cadets_canada_theme.large:
+  label: Large
+  mediaQuery: 'all and (min-width: 64em)'
+cadets_canada_theme.xlarge:
+  label: Extra large
+  mediaQuery: 'all and (min-width: 80em)'
