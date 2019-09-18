@@ -1,0 +1,85 @@
+$ws_green: #1A442A;
+$ws_gold: #FFC641;
+$ws_light_grey: #e5e5e5;
+$ws_dark_grey: #787878;
+$font_family: 'Ubuntu', sans-serif;
+
+@mixin date_heading {
+  background-color: $ws_green;
+  color: $ws_gold;
+  font-family: $font_family;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+  font-weight: bold;
+}
+
+@mixin heading_text {
+  font-family: $font_family;
+  margin: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $ws_gold;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+
+  @include large {
+    padding: 1rem 0;
+    font-size: 2rem;
+  }
+}
+
+@mixin news_title_heading {
+  color: $ws_green;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+@mixin menu_link {
+  font-family: $font_family;
+}
+
+@mixin corps_text {
+  text-transform: uppercase;
+  font-family: $font_family;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  padding-left: 0.5rem;
+  text-shadow: 2px 2px black;
+  margin: 0;
+  padding-top: 1.5rem;
+
+  @include large {
+    letter-spacing: 0.45rem;
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+@mixin alert_text {
+  font-family: $font_family;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin media_text {
+  font-family: $font_family;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin news_text {
+  font-family: $font_family;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin caption_text {
+  font-family: $font_family;
+  text-transform: uppercase;
+  font-weight: bold;
+}

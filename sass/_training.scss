@@ -1,0 +1,37 @@
+.ws-training {
+  width: 100%;
+  padding: 1rem 0;
+
+  &--wrapper {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--date {
+    @include date_heading;
+  }
+
+  &--image {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    .field--name-field-media-image-3 {
+      text-align: center;
+    }
+  }
+}
+
+.view-ws-view-training-next-tuesday {
+  .view-empty {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+
+    @include large {
+      padding: 1rem 0;
+    }
+  }
+}

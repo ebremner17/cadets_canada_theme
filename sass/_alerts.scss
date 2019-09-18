@@ -1,0 +1,94 @@
+.page-node-type-ws-alert {
+  .page-title {
+    background-color: $ws_gold;
+    color: $ws_green;
+    padding: 1rem;
+    margin: 1rem 0 0;
+    @include alert_text;
+  }
+}
+
+.node--type-ws-alert {
+  max-width: 63rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  .field--name-field-ws-alert-date {
+    background-color: $ws_green;
+    color: $ws_gold;
+    padding: .5rem 1rem;
+    font-weight: 700;
+  }
+
+  .field--name-field-ws-alert-type {
+    background-color: $ws_light_grey;
+    color: $ws_green;
+    padding: .5rem 1rem;
+    font-weight: 700;
+  }
+
+  .field--name-field-ws-alert-text {
+    padding: 1rem;
+  }
+}
+
+.view-ws-view-alerts-all {
+  max-width: 63rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem 0;
+
+  .views-row {
+    padding: 1rem 0;
+  }
+}
+
+.view-ws-view-alerts-today {
+  .ws-alert--wrapper {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+  }
+}
+
+.view-ws-view-alerts-today,
+.view-ws-view-alerts-all {
+
+  .ws-alert--Cancellation {
+    background-color: red;
+    color: white;
+  }
+
+  .ws-alert--Reminder {
+    background-color: $ws_gold;
+    color: black;
+  }
+
+  .ws-alert--Update {
+    background-color: darkblue;
+    color: white;
+  }
+
+  .ws-alert--Alert {
+    background-color: $ws_green;
+    color: $ws_gold;
+  }
+
+  .ws-alert {
+    width: 100%;
+
+    &--wrapper {
+      padding: 1rem;
+    }
+
+    &--type {
+      @include alert_text;
+      font-size: 1.2rem;
+    }
+
+    &--message {
+      padding-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.ws-ros,
+.view-ws-view-routine-orders-all {
+  width: 100%;
+
+  &--date {
+    @include date_heading;
+
+    .field--name-field-ws-ro-start-date,
+    .field--name-field-ws-ro-end-date {
+      display: inline-block;
+    }
+  }
+
+  &--file {
+    padding: 1rem;
+  }
+
+  .view-empty {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem 0;
+  }
+}
+
+.ws-ros {
+  &--wrapper {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem 0;
+  }
+}
+
+.view-ws-view-routine-orders-all {
+  .views-row {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem 0;
+  }
+}

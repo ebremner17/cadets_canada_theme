@@ -1,0 +1,24 @@
+.warspite {
+  .node .field--type-image {
+    margin: 0;
+  }
+}
+
+.field--name-field-ws-image-caption {
+  background-color: #e5e5e5;
+  color: #1A442A;
+  @include caption_text;
+  font-size: 0.7rem;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.block-entity-browser-blockws-ebr-image {
+  max-width: 63rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}

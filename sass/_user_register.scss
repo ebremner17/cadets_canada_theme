@@ -1,0 +1,37 @@
+.user-register-form {
+  max-width: 63rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1rem;
+
+  @include large {
+    padding: 0;
+  }
+
+  .field--name-field-ws-user-first-name,
+  .field--name-field-ws-user-last-name,
+  .field--name-field-ws-user-carrier,
+  .field--name-field-ws-user-cell,
+  .field--name-field-ws-user-type,
+  .field--name-field-ws-user-cadet-name {
+
+    .form-item {
+      border: 1px solid black;
+      padding: 1rem;
+    }
+  }
+
+  .field--name-field-ws-user-method {
+    fieldset {
+      border: 1px solid black;
+      padding: 1rem;
+    }
+  }
+
+  .form-type-email,
+  .form-item-name,
+  .form-item-pass {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,18 @@
+.ws-announcements {
+  padding: 1rem 0;
+  width: 100%;
+
+  &--wrapper {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--date {
+    @include date_heading;
+  }
+
+  &--text {
+    padding-left: 2rem;
+  }
+}

@@ -1,0 +1,10 @@
+.field--name-field-ws-text {
+  padding: 1rem;
+  max-width: 63rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include large {
+    padding: 1rem 0;
+  }
+}

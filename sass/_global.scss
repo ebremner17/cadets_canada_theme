@@ -1,0 +1,48 @@
+body.warspite {
+  background-color: white;
+
+  .layout-container {
+    max-width: 100%;
+  }
+
+  a {
+    border-bottom: none;
+    color: $ws_green;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .region-content {
+    min-height: 400px;
+    @include large {
+      min-height: 600px;
+    }
+  }
+}
+
+.warspite {
+  .block .content,
+  .node__content  {
+    margin-top: 0;
+  }
+
+  iframe {
+    width: 400px;
+    max-width: 100%;
+
+    @include medium {
+      width: 700px;
+    }
+
+    @include large {
+      width: 100%;
+    }
+  }
+
+  img {
+    padding: 0;
+    margin: 0;
+  }
+}

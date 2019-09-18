@@ -1,0 +1,14 @@
+.ws-heading-text {
+  width: 100%;
+  background-color: #1A442A;
+
+  &--wrapper {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    h2 {
+      @include heading_text;
+    }
+  }
+}
