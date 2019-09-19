@@ -1,3 +1,13 @@
 <?php
 
+function cadets_canada_theme_preprocess_region(&$variables) {
 
+  if (isset($variables['region']) && $variables['region'] == 'header') {
+
+    $config = \Drupal::config('cc_site_controller.sitesettings');
+
+    $variables['corps_name'] = $config->get('corps_name');
+    $variables['corps_number'] = $config->get('corps_number');
+    $variables['type_of_cadets'] = $config->get('type_of_cadets');
+  }
+}

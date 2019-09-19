@@ -1,14 +1,22 @@
-body.warspite {
-  .footer-container {
-    a {
-      color: white;
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    .footer-container {
+      a {
+        color: white;
+      }
     }
   }
 }
 
 .footer-container {
-  background-color: black;
-  color: white;
+
+  @each $theme in map-keys($themes) {
+    .#{$theme} & {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+      color: white;
+    }
+  }
+
   text-align: center;
   height: calc(100% - 130px);
 

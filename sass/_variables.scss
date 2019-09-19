@@ -1,3 +1,38 @@
+$themes: (
+  air-cadets: (
+    primary-color: #006DAE,
+    secondary-color: #ffffff
+  ),
+  army-cadets: (
+    primary-color: #4B5320,
+    secondary-color: #A9271E
+  ),
+  sea-cadets: (
+    primary-color: #000000,
+    secondary-color: #ffffff
+  ),
+  generic: (
+    primary-color: #787878,
+    generic-color: #ffffff
+  ),
+  rcscc-warspite: (
+    primary-color: #1A442A,
+    secondary-color: #FFC641
+  ),
+);
+
+/*
+@function get_color($theme, $key) {
+  @return map-get($themes, $key)
+}
+*/
+
+/*
+@function get_color($theme, $key) {
+  @return map-get(map-get($themes, $theme), $key)
+}
+*/
+
 $ws_green: #1A442A;
 $ws_gold: #FFC641;
 $ws_light_grey: #e5e5e5;
@@ -45,7 +80,7 @@ $font_family: 'Ubuntu', sans-serif;
 @mixin corps_text {
   text-transform: uppercase;
   font-family: $font_family;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   text-align: center;
   padding-left: 0.5rem;
@@ -54,8 +89,8 @@ $font_family: 'Ubuntu', sans-serif;
   padding-top: 1.5rem;
 
   @include large {
-    letter-spacing: 0.45rem;
-    font-size: 2rem;
+    letter-spacing: 0.25rem;
+    font-size: 1.5rem;
     text-align: left;
   }
 }

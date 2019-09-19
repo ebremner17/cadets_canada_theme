@@ -5,7 +5,15 @@
     </a>
   </div>
   <div class="header-container--corps">
-    <p>Royal Canadian Sea Cadet Corps Warspite</p>
+    <p>
+      {% if type_of_cadets == 'air' %}
+        {{ corps_number }} Royal Canadian Air Cadet Squadron {{ corps_name }}
+      {% elseif type_of_cadets == 'sea' %}
+        {{ corps_number }} Royal Canadian Sea Cadet Corps {{ corps_name }}
+      {% elseif type_of_cadets == 'army' %}
+        {{ corps_number }} Royal Canadian Army Cadet Corps {{ corps_name }}
+      {% endif %}
+    </p>
   </div>
   <div class="header-container--menu">
     {{ content }}

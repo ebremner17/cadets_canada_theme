@@ -5,7 +5,12 @@
 }
 
 .header-container {
-  background-color: $ws_green;
+
+  @each $theme in map-keys($themes) {
+    .#{$theme} & {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+    }
+  }
 
   display: grid;
   grid-template-columns: 75% 25%;
