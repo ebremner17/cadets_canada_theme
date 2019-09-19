@@ -10,4 +10,32 @@ function cadets_canada_theme_preprocess_region(&$variables) {
     $variables['corps_number'] = $config->get('corps_number');
     $variables['type_of_cadets'] = $config->get('type_of_cadets');
   }
+
+  if (isset($variables['region']) && $variables['region'] == 'footer') {
+    $config = \Drupal::config('cc_site_controller.sitesettings');
+
+    $variables['parade_night'] = $config->get('parade_night') !== NULL ? $config->get('parade_night') : 'Monday';
+
+    $variables['parade_night_start_time'] = $config->get('parade_night_start_time') !== NULL ? $config->get('parade_night_start_time') : '6:30 pm';
+
+    $variables['parade_night_end_time'] = $config->get('parade_night_end_time') !== NULL ? $config->get('parade_night_end_time') : '9:30 pm';
+
+    $variables['parade_night_address'] = $config->get('parade_night_address');
+
+    $variables['parade_night_city'] = $config->get('parade_night_city');
+
+    $variables['parade_night_province'] = $config->get('parade_night_province');
+
+    $variables['phone_number'] = $config->get('phone_number');
+
+    $variables['email_address'] = $config->get('email_address');
+
+    $variables['mailing_address'] = $config->get('mailing_address');
+
+    $variables['mailing_address_city'] = $config->get('mailing_address_city');
+
+    $variables['mailing_address_province'] = $config->get('mailing_address_province');
+
+    $variables['mailing_address_postal_code'] = $config->get('mailing_address_postal_code');
+  }
 }
