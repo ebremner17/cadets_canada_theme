@@ -1,8 +1,10 @@
 <div class="header-container">
   <div class="header-container--logo">
-    <a href="{{ url('<front>') }}">
-      <img src="{{ url('<front>') }}/{{ directory}}/images/warspite_crest_shadow.png" alt="RCSCC Warspite crest">
-    </a>
+    {% if relative_logo_url %}
+      <a href="{{ url('<front>') }}">
+        <img src="{{ relative_logo_url }}" alt="{{ corps_name }} crest">
+      </a>
+    {% endif %}
   </div>
   <div class="header-container--corps">
     <p>

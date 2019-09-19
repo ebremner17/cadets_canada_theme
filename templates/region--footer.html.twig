@@ -23,17 +23,13 @@
       {{ mailing_address_postal_code }}
     </div>
     <div class="footer-container--social">
-      <div class="footer-container--facebook">
-        <a href="https://www.facebook.com/94-RCSCC-Warspite-205053830382733">
-          <img src="{{ directory }}/images/facebook.png" />
-        </a>
-      </div>
       <div class="footer-container--login-logout">
         {% if logged_in %}
           <a href="{{ url('<front>') }}/user/logout">Logout</a>
         {% else %}
           <a href="{{ url('<front>') }}/user/login">Login</a>
         {% endif %}
+      </div>
     </div>
   </div>
 </div>
