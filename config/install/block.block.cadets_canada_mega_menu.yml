@@ -1,24 +1,19 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - system.menu.main
   module:
-    - system
+    - we_megamenu
   theme:
     - cadets_canada_theme
-id: cadets_canada_main_navigation
+id: cadets_canada_mega_menu
 theme: cadets_canada_theme
 region: header
 weight: 0
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'we_megamenu_block:main'
 settings:
-  id: 'system_menu_block:main'
+  id: 'we_megamenu_block:main'
   label: 'Main navigation'
-  provider: system
+  provider: we_megamenu
   label_display: '0'
-  level: 1
-  depth: 0
-  expand_all_items: false
 visibility: {  }
