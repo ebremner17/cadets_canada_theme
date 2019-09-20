@@ -1,13 +1,40 @@
-.page-node-type-ws-alert {
+.page-node-type-alerts {
   .page-title {
-    background-color: $ws_gold;
-    color: $ws_green;
+    @each $theme in map-keys($themes) {
+      .#{$theme} & {
+        background-color: #{map-get(map-get($themes, $theme), primary-color)};
+        color: #{map-get(map-get($themes, $theme), heading-textw-color)};
+      }
+    }
     padding: 1rem;
     margin: 1rem 0 0;
     @include alert_text;
   }
 }
 
+.cc-alert {
+  width: 100%;
+
+  &--wrapper {
+    @include cc-wrapper;
+    padding: 1rem;
+  }
+
+  &--Reminder {
+    background-color: $gold;
+  }
+
+  &--date {
+    @include alert_text;
+    .field--name-field-cc-alert-date {
+      display: inline-block;
+    }
+  }
+
+  &--text {
+    padding-left: 0.5rem;
+  }
+}
 .node--type-ws-alert {
   max-width: 63rem;
   margin-right: auto;
