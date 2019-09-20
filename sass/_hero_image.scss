@@ -2,24 +2,30 @@
   float: none;
 }
 
-.media--type-ws-mt-hero-image {
+.media--type-cc-mt-hero-image {
   position: relative;
 
-  .field--name-field-ws-hero-image-text {
+  .hero-image-caption {
+    width: 100%;
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
-    padding: 1rem;
-    @include media_text;
-    color: #ffffff;
-    line-height: 1;
-    text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
-    font-size: 3rem;
 
-    @include large {
-      font-size: 4.75rem;
+    &--wrapper {
+      width: 100%;
+    }
+
+    &--caption {
+      color: #ffffff;
+      text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1rem;
+
+      @include large {
+        font-size: 1.5rem;
+      }
     }
   }
 

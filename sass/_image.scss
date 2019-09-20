@@ -1,21 +1,28 @@
-.warspite {
-  .node .field--type-image {
-    margin: 0;
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    .node .field--type-image {
+      margin: 0;
+    }
   }
 }
 
-.field--name-field-ws-image-caption {
-  background-color: #e5e5e5;
-  color: #1A442A;
+.field--name-field-cc-media-image-caption {
+
+  @each $theme in map-keys($themes) {
+    .#{$theme} & {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+      color: #{map-get(map-get($themes, $theme), heading-text-color)};
+    }
+  }
+
   @include caption_text;
-  font-size: 0.7rem;
-  padding: 1rem 0 1rem 1rem;
+
+  width: 100%;
+  text-align: center;
 }
 
-.block-entity-browser-blockws-ebr-image {
-  max-width: 63rem;
-  margin-right: auto;
-  margin-left: auto;
+.block-entity-browser-blockcc-media-ebr-image {
+  @include cc-wrapper;
 
   img {
     width: 100%;

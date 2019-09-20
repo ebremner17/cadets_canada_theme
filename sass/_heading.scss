@@ -1,6 +1,12 @@
-.ws-heading-text {
+.cc-heading-text {
+
+  @each $theme in map-keys($themes) {
+    .#{$theme} & {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+      color: #{map-get(map-get($themes, $theme), heading-text-color)};
+    }
+  }
   width: 100%;
-  background-color: #1A442A;
 
   &--wrapper {
     max-width: 63rem;

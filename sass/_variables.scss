@@ -53,13 +53,19 @@ $font_family: 'Ubuntu', sans-serif;
   font-weight: bold;
 }
 
+@mixin caption_text {
+  font-family: $font_family;
+  margin: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
 @mixin heading_text {
   font-family: $font_family;
   margin: 0;
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: $ws_gold;
   letter-spacing: 0.1rem;
   padding: 1rem;
 
