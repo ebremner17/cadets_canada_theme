@@ -1,37 +1,30 @@
 $themes: (
   air-cadets: (
     primary-color: #006DAE,
-    secondary-color: #ffffff
+    secondary-color: #FFFFFF,
+    heading-text-color: #FFFFFF
   ),
   army-cadets: (
     primary-color: #4B5320,
-    secondary-color: #A9271E
+    secondary-color: #A9271E,
+    heading-text-color: #FFFFFF
   ),
   sea-cadets: (
     primary-color: #000000,
-    secondary-color: #ffffff
+    secondary-color: #FFFFFF,
+    heading-text-color: #FFFFFF
   ),
   generic: (
     primary-color: #787878,
-    generic-color: #ffffff
+    generic-color: #ffffff,
+    heading-text-color: #FFFFFF
   ),
   rcscc-warspite: (
     primary-color: #1A442A,
-    secondary-color: #FFC641
+    secondary-color: #FFC641,
+    heading-text-color: #FFC641
   ),
 );
-
-/*
-@function get_color($theme, $key) {
-  @return map-get($themes, $key)
-}
-*/
-
-/*
-@function get_color($theme, $key) {
-  @return map-get(map-get($themes, $theme), $key)
-}
-*/
 
 $ws_green: #1A442A;
 $ws_gold: #FFC641;
@@ -39,9 +32,21 @@ $ws_light_grey: #e5e5e5;
 $ws_dark_grey: #787878;
 $font_family: 'Ubuntu', sans-serif;
 
+@mixin cc-wrapper {
+  max-width: 63rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 @mixin date_heading {
-  background-color: $ws_green;
-  color: $ws_gold;
+
+  @each $theme in map-keys($themes) {
+    .#{$theme} & {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+      color: #{map-get(map-get($themes, $theme), heading-text-color)};
+    }
+  }
+
   font-family: $font_family;
   text-transform: uppercase;
   padding: .5rem 1rem;

@@ -1,11 +1,9 @@
-.ws-announcements {
+.cc-announcements {
   padding: 1rem 0;
   width: 100%;
 
   &--wrapper {
-    max-width: 63rem;
-    margin-right: auto;
-    margin-left: auto;
+    @include cc-wrapper;
   }
 
   &--date {
