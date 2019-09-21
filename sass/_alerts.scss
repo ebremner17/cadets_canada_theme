@@ -10,10 +10,19 @@
     margin: 1rem 0 0;
     @include alert_text;
   }
+
 }
 
 .cc-alert {
   width: 100%;
+
+  .page-node-type-alerts & {
+    padding-top: 1rem;
+  }
+
+  .view-cc-view-alerts-all & {
+    padding: 1rem;
+  }
 
   &--wrapper {
     @include cc-wrapper;
@@ -21,6 +30,20 @@
   }
 
   &--Reminder {
+    background-color: $gold;
+  }
+
+  &--Cancellation {
+    background-color: $red;
+    color: white;
+  }
+
+  &--Alert {
+    background-color: $red;
+    color: white;
+  }
+
+  &--Update {
     background-color: $gold;
   }
 
@@ -33,89 +56,5 @@
 
   &--text {
     padding-left: 0.5rem;
-  }
-}
-.node--type-ws-alert {
-  max-width: 63rem;
-  margin-right: auto;
-  margin-left: auto;
-
-  .field--name-field-ws-alert-date {
-    background-color: $ws_green;
-    color: $ws_gold;
-    padding: .5rem 1rem;
-    font-weight: 700;
-  }
-
-  .field--name-field-ws-alert-type {
-    background-color: $ws_light_grey;
-    color: $ws_green;
-    padding: .5rem 1rem;
-    font-weight: 700;
-  }
-
-  .field--name-field-ws-alert-text {
-    padding: 1rem;
-  }
-}
-
-.view-ws-view-alerts-all {
-  max-width: 63rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 1rem 0;
-
-  .views-row {
-    padding: 1rem 0;
-  }
-}
-
-.view-ws-view-alerts-today {
-  .ws-alert--wrapper {
-    max-width: 63rem;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 1rem;
-  }
-}
-
-.view-ws-view-alerts-today,
-.view-ws-view-alerts-all {
-
-  .ws-alert--Cancellation {
-    background-color: red;
-    color: white;
-  }
-
-  .ws-alert--Reminder {
-    background-color: $ws_gold;
-    color: black;
-  }
-
-  .ws-alert--Update {
-    background-color: darkblue;
-    color: white;
-  }
-
-  .ws-alert--Alert {
-    background-color: $ws_green;
-    color: $ws_gold;
-  }
-
-  .ws-alert {
-    width: 100%;
-
-    &--wrapper {
-      padding: 1rem;
-    }
-
-    &--type {
-      @include alert_text;
-      font-size: 1.2rem;
-    }
-
-    &--message {
-      padding-left: 1rem;
-    }
   }
 }
