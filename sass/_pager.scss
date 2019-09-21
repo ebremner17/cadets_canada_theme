@@ -1,3 +1,21 @@
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    .pager {
+      ul.pager__items {
+        li > a {
+          background-color: #{map-get(map-get($themes, $theme),heading-text-color)};
+          color: #{map-get(map-get($themes, $theme), primary-color)};
+
+          &:hover {
+            background-color: #{map-get(map-get($themes, $theme), primary-color)};
+            color: #{map-get(map-get($themes, $theme), heading-text-color)};
+          }
+        }
+      }
+    }
+  }
+}
+
 .pager {
 
   ul.pager__items {
@@ -19,8 +37,6 @@
     li > a {
       display: inline-block;
       border-radius: 0;
-      background-color: $ws_green;
-      color: $ws_gold;
       border: none;
       padding: 1rem;
 
