@@ -39,8 +39,8 @@
   }
 }
 
-.view-ws-view-news-front-page,
-.view-ws-view-all-news {
+.view-cc-view-news-latest,
+.view-cc-view-news-all {
   max-width: 63rem;
   margin-right: auto;
   margin-left: auto;
@@ -49,7 +49,7 @@
     padding: 1rem 0;
   }
 
-  .views-field-field-ws-news-summary {
+  .views-field-field-cc-news-summary {
     padding: 1rem 1rem;
   }
 
@@ -58,39 +58,56 @@
     display: block;
   }
 
-  .ws-news--date {
+  .cc-news--date {
     @include date_heading;
   }
 }
 
 .news-item--heading {
-  background-color: $ws_gold;
 
-  &:hover {
-    a {
-      h3 {
-        color: white;
+  @include news_title_heading;
+
+  @each $theme in map-keys($themes) {
+    .#{$theme} & {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+      color: #{map-get(map-get($themes, $theme), secondary-color)};
+
+      a {
+        display: block;
+        color: #{map-get(map-get($themes, $theme), heading-text-color)};
         text-decoration: none;
+        padding: 1rem;
+        width: 100%;
       }
       &:hover {
+        background-color: $dark_grey;
         text-decoration: none;
       }
     }
   }
+}
 
-  h3 {
-    @include news_title_heading;
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    .cc-news--read-news-item {
+      a {
+        background-color: #{map-get(map-get($themes, $theme), primary-color)};
+        color: #{map-get(map-get($themes, $theme), secondary-color)};
+
+        &:hover {
+          background-color: $dark_grey;
+        }
+      }
+    }
   }
 }
 
-.ws-news--read-news-item {
+.cc-news--read-news-item {
   text-align: center;
 
   a {
-    background-color: $ws_light_grey;
     padding: 1rem;
     text-align: center;
-    color: $ws_green;
     text-decoration: none;
     border-bottom-style: none;
     @include news_text;
@@ -100,8 +117,6 @@
     }
 
     &:hover {
-      background-color: $ws_dark_grey;
-      color: $ws_gold;
       text-decoration: none;
     }
   }

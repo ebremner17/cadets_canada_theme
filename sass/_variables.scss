@@ -6,7 +6,7 @@ $themes: (
   ),
   army-cadets: (
     primary-color: #4B5320,
-    secondary-color: #A9271E,
+    secondary-color: #FFFFFF,
     heading-text-color: #FFFFFF
   ),
   sea-cadets: (
@@ -29,6 +29,7 @@ $themes: (
 $gold: #FFC641;
 $red: red;
 $blue: darkblue;
+$dark_grey: #787878;
 
 $ws_green: #1A442A;
 $ws_gold: #FFC641;
@@ -46,8 +47,8 @@ $font_family: 'Ubuntu', sans-serif;
 
   @each $theme in map-keys($themes) {
     .#{$theme} & {
-      background-color: #{map-get(map-get($themes, $theme), primary-color)};
-      color: #{map-get(map-get($themes, $theme), heading-text-color)};
+      background-color: #{map-get(map-get($themes, $theme), secondary-color)};
+      color: #{map-get(map-get($themes, $theme), primary-color)};
     }
   }
 
@@ -79,9 +80,7 @@ $font_family: 'Ubuntu', sans-serif;
 }
 
 @mixin news_title_heading {
-  color: $ws_green;
   font-family: 'Ubuntu', sans-serif;
-  padding: 1rem;
   text-transform: uppercase;
   font-weight: bold;
   margin: 0;

@@ -5,19 +5,23 @@ body.cadets-canada {
     max-width: 100%;
   }
 
-  a {
-    border-bottom: none;
-    color: $ws_green;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   .region-content {
     min-height: 400px;
     @include large {
       min-height: 600px;
+    }
+  }
+}
+
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    a {
+      border-bottom: none;
+      color: map-get(map-get($themes, $theme), primary-color);
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
