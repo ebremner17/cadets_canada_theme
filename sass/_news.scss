@@ -1,16 +1,27 @@
-.page-node-type-ws-news {
-  .node--type-ws-news {
-    max-width: 63rem;
-    margin-right: auto;
-    margin-left: auto;
-  }
+@each $theme in map-keys($themes) {
+  .#{$theme}.page-node-type-cc-news {
+    .page-title {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+      color: #{map-get(map-get($themes, $theme), heading-text-color)};
+      padding: 1rem;
+      @include news_text;
+      margin: 1rem 0 0 0;
+    }
 
-  .field--name-field-ws-news-date {
-    background-color: $ws_green;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    color: $ws_gold;
-    @include news_text;
-    font-weight: bold;
+    .field--name-field-cc-news-date {
+      background-color: #{map-get(map-get($themes, $theme), secondary-color)};
+      color: #{map-get(map-get($themes, $theme), primary-color)};
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      @include news_text;
+      font-weight: bold;
+    }
+  }
+}
+
+.page-node-type-cc-news {
+
+  .node--type-cc-news {
+    @include cc-wrapper;
   }
 
   .layout-builder {
@@ -19,20 +30,12 @@
     margin-left: auto;
   }
 
-  .field--name-field-ws-text {
+  .field--name-field-cc-text {
     padding: 1rem 1rem 0 1rem;
 
     @include large {
       padding: 1rem 0 0 0;
     }
-  }
-
-  .page-title {
-    background-color: $ws_gold;
-    color: $ws_green;
-    padding: 1rem;
-    @include news_text;
-    margin: 1rem 0 0 0;
   }
 }
 

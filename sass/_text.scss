@@ -1,8 +1,6 @@
-.field--name-field-ws-text {
+.field--name-field-ec-copy-text {
   padding: 1rem;
-  max-width: 63rem;
-  margin-right: auto;
-  margin-left: auto;
+  @include cc-wrapper;
 
   @include large {
     padding: 1rem 0;
