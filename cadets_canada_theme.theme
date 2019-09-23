@@ -10,7 +10,14 @@ function cadets_canada_theme_preprocess_region(&$variables) {
     $variables['corps_number'] = $config->get('corps_number');
     $variables['type_of_cadets'] = $config->get('type_of_cadets');
 
-    $variables['relative_logo_url'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+    if ($config->get('crest') !== NULL) {
+
+      $file = \Drupal::entityTypeManager()
+        ->getStorage('file')
+        ->load($config->get('crest')[0]);
+
+      $variables['corps_crest'] = file_create_url($file->getFileUri());
+    }
   }
 
   if (isset($variables['region']) && $variables['region'] == 'footer') {

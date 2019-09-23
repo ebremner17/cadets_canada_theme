@@ -1,8 +1,9 @@
 <div class="header-container">
   <div class="header-container--logo">
-    {% if relative_logo_url %}
+    {{ corps_crest }}
+    {% if corps_crest %}
       <a href="{{ url('<front>') }}">
-        <img src="{{ relative_logo_url }}" alt="{{ corps_name }} crest">
+        <img src="{{ corps_crest }}" alt="{{ corps_name }} crest">
       </a>
     {% endif %}
   </div>
