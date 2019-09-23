@@ -1,25 +1,33 @@
-.ws-training {
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    .cc-training {
+      &--date {
+        background-color: #{map-get(map-get($themes, $theme), primary-color)};
+        color: #{map-get(map-get($themes, $theme), secondary-color)};
+      }
+    }
+  }
+}
+
+.cc-training {
   width: 100%;
   padding: 1rem 0;
 
   &--wrapper {
-    max-width: 63rem;
-    margin-right: auto;
-    margin-left: auto;
+    @include cc-wrapper;
   }
 
   &--date {
-    @include date_heading;
+    padding: 1rem;
+    font-family: $font_family;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   &--image {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-
-    .field--name-field-media-image-3 {
-      text-align: center;
-    }
   }
 }
 
