@@ -1,0 +1,83 @@
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    .region-we-mega-menu {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+    }
+
+    .navbar-we-mega-menu {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+    }
+
+    .navbar-we-mega-menu.navbar .nav-tabs > li.active > a {
+      background-color: #{map-get(map-get($themes, $theme), secondary-color)};
+      color: #{map-get(map-get($themes, $theme), primary-color)} !important;
+    }
+
+    .navbar-we-mega-menu.navbar .nav .open > a {
+      background-color: #{map-get(map-get($themes, $theme), secondary-color)};
+      color: #{map-get(map-get($themes, $theme), primary-color)} !important;
+    }
+
+    .we-mega-menu-ul > .we-mega-menu-li.active a {
+      color: #{map-get(map-get($themes, $theme), secondary-color)} !important;
+    }
+
+    .we-mega-menu-ul > .we-mega-menu-li > a {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+      color: #{map-get(map-get($themes, $theme), secondary-color)};
+      border-right: 1px solid #{map-get(map-get($themes, $theme), primary-color)};
+
+      &:hover {
+        background-color: #{map-get(map-get($themes, $theme), secondary-color)};
+        color: #{map-get(map-get($themes, $theme), primary-color)};
+      }
+    }
+
+    .we-mega-menu-submenu {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+
+      li.we-mega-menu-li a {
+        color:#{map-get(map-get($themes, $theme), secondary-color)};
+
+        &:hover {
+          color: #{map-get(map-get($themes, $theme), secondary-color)};
+        }
+      }
+    }
+  }
+}
+
+.cadets-canada {
+  .region-we-mega-menu {
+    margin: 0;
+    padding-top: 2rem;
+
+    @include large {
+      padding-top: 0;
+    }
+  }
+
+  a.navbar-toggle {
+    .icon-bar {
+      width: 38px;
+    }
+
+    &:after {
+      color: white;
+      padding-top: 0.5rem;
+      content: "Menu";
+    }
+  }
+
+  .we-mega-menu-ul > .we-mega-menu-li {
+    border: none;
+  }
+
+  .we-mega-menu-ul > .we-mega-menu-li > a {
+    @include menu_link;
+  }
+
+  .we-mega-menu-ul .dropdown-menu > a:after, .we-mega-menu-ul .dropdown-menu > span:after {
+    opacity: 1;
+  }
+}
