@@ -1,18 +1,31 @@
-.ws-ros,
-.view-ws-view-routine-orders-all {
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    .cc-ros {
+      &--date {
+        background-color: #{map-get(map-get($themes, $theme), primary-color)};
+        color: #{map-get(map-get($themes, $theme), secondary-color)};
+      }
+    }
+  }
+}
+
+.cc-ros {
   width: 100%;
 
   &--date {
-    @include date_heading;
+    padding: 1rem;
+    font-family: $font_family;
+    text-transform: uppercase;
+    font-weight: bold;
 
-    .field--name-field-ws-ro-start-date,
-    .field--name-field-ws-ro-end-date {
+    .field--name-field-cc-ro-start-date,
+    .field--name-field-cc-ro-end-date {
       display: inline-block;
     }
   }
 
   &--file {
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
   }
 
   .view-empty {
@@ -23,11 +36,9 @@
   }
 }
 
-.ws-ros {
+.cc-ros {
   &--wrapper {
-    max-width: 63rem;
-    margin-right: auto;
-    margin-left: auto;
+    @include cc-wrapper;
     padding: 1rem 0;
   }
 }
