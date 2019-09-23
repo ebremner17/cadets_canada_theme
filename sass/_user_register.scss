@@ -8,12 +8,12 @@
     padding: 0;
   }
 
-  .field--name-field-ws-user-first-name,
-  .field--name-field-ws-user-last-name,
-  .field--name-field-ws-user-carrier,
-  .field--name-field-ws-user-cell,
-  .field--name-field-ws-user-type,
-  .field--name-field-ws-user-cadet-name {
+  .field--name-field-cc-user-first-name,
+  .field--name-field-cc-user-last-name,
+  .field--name-field-cc-user-carrier,
+  .field--name-field-cc-user-cell,
+  .field--name-field-cc-user-type,
+  .field--name-field-cc-user-cadet-name {
 
     .form-item {
       border: 1px solid black;
@@ -21,7 +21,7 @@
     }
   }
 
-  .field--name-field-ws-user-method {
+  .field--name-field-cc-user-method {
     fieldset {
       border: 1px solid black;
       padding: 1rem;
@@ -30,8 +30,15 @@
 
   .form-type-email,
   .form-item-name,
-  .form-item-pass {
+  .form-item-pass,
+  .form-item-first-name,
+  .form-last-name {
     border: 1px solid black;
     padding: 1rem;
+  }
+
+  legend {
+    width: inherit;
+    border: 0;
   }
 }
