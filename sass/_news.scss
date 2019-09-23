@@ -49,6 +49,13 @@
     padding: 1rem 0;
   }
 
+  .view-empty {
+
+    @include large {
+      padding: 1rem 0;
+    }
+  }
+
   .views-field-field-cc-news-summary {
     padding: 1rem 1rem;
   }
