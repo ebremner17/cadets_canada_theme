@@ -1,3 +1,12 @@
+@each $theme in map-keys($themes) {
+  .#{$theme} {
+    .cc-announcements--date {
+      background-color: #{map-get(map-get($themes, $theme), primary-color)};
+      color: #{map-get(map-get($themes, $theme), heading-text-color)};
+    }
+  }
+}
+
 .cc-announcements {
   padding: 1rem 0;
   width: 100%;
@@ -7,7 +16,9 @@
   }
 
   &--date {
-    @include date_heading;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    @include news_text;
+    font-weight: bold;
   }
 
   &--text {
