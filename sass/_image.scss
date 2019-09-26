@@ -30,6 +30,7 @@
 
 .block-entity-browser-blockcc-media-ebr-image {
   @include cc-wrapper;
+  padding-bottom: 1rem;
 
   img {
     width: 100%;
