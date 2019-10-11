@@ -28,13 +28,18 @@
   }
 }
 
-.block-entity-browser-blockcc-media-ebr-image {
+.block-entity-browser-blockcc-media-ebr-image.contained-image {
   @include cc-wrapper;
+}
+
+.block-entity-browser-blockcc-media-ebr-image {
+
   padding-bottom: 1rem;
 
   img {
     width: 100%;
     display: block;
+    max-height: 500px;
   }
 }
 
