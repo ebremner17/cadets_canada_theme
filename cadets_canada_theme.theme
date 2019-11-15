@@ -1,5 +1,9 @@
 <?php
 
+function cadets_canada_theme_preprocess_comment(&$variables) {
+  $variables['created'] = date('D M, j, Y - G:i a', $variables['comment']->created->getValue()[0]['value']);
+}
+
 function cadets_canada_theme_preprocess_region(&$variables) {
 
   if (isset($variables['region']) && $variables['region'] == 'header') {
